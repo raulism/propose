@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<style>
+body {	margin: 0;	padding: 0;	overflow: hidden;}
+.city {	width: 100%;	position: fixed;   bottom: 0px;   z-index: 100;}
+.city img {	width: 100%;}
+</style>
+<title>HTML5夜空烟花绽放动画效果</title>
+</head>
+<body onselectstart="return false">
+	<canvas id='cas' style="background-color: rgba(0, 5, 24, 1)">浏览器不支持canvas</canvas>
+	<div class="city">
+		<img src="./img/city.png" alt="" />
+	</div>
+	<img src="./img/moon.png" alt="" id="moon" style="visibility: hidden;" />
+	<div style="display: none">
+		<div class="shape">新年</div>
+		<div class="shape">快乐</div>
+		<div class="shape">动画</div>
+		<div class="shape">夜空</div>
+	</div>
+</body>
+<script src="js/fire.js"></script>
+</html>
