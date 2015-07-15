@@ -1,54 +1,60 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<title>测试页面</title>
-<script type="text/javascript" src="jquery-1.8.3.js"></script>
-<script type="text/javascript">
-　 function func1(){
-	 	alert("你点击了一个按钮1");
-	 	func2();
-	}
- 	function func2(){
- 		alert("你点击了一个按钮2");
- 		func3();
-	}
- 	function func3(){
- 		alert("你点击了一个按钮3");
- 		func4();
-	}
- 	function func4(){
- 		alert("你点击了一个按钮4");
- 		func5();
-	}
- 	function func5(){
- 		alert("你点击了一个按钮5");
- 		disp_confirm();
-	}
- 	function disp_confirm()    {    
- 	     var r=confirm("答应吧")   
- 	 	 if (r==true){    
- 	 		window.location.href="demo.html"
- 	    }else{    
-	 	     func6();  
- 	     }    
- 	}    
- 	function func6(){
- 		 var r=confirm("真的取消吗，会后悔的")   
- 	 	 if (r==true){    
- 	 		disp_confirm();
- 	    }else{    
- 	    	disp_confirm();  
- 	     }    
-	}
-</script>
+<meta charset="UTF-8">
+<title>DsDialog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/dsdialog.js"></script>
 </head>
-
-<body onload="func1();">
+<body>
+<!--以下代码不作为插件效果内容 -->
 </body>
-
-<!-- <script src="artDialog.source.js?skin=aero"></script> -->
-<!-- <script src="./_doc/demo.js"></script>  -->
-
+<script type="text/javascript">
+$(document).ready(function(){	
+	//$("#demo3").click(function(){
+		ds.dialog({
+		   title : '来自石兴的消息',
+		   content : '输入的数量不正确！',
+		   onyes:$.windowbox.message1,
+		   icon : "success.png",
+		});
+	//});
+});	
+$.windowbox = { 
+	message1: function(){ 
+		ds.dialog({
+		   title : '来自石兴的消息',
+		   content : '输入的数1输入的数量不正确输入的数量不正确输入的数量不正确输入的数量不正确输入的数量不正确输入的数量不正确！',
+		   onyes:$.windowbox.message2,
+		   icon : "success.png",
+		}); 
+	},
+	message2: function(){ 
+		ds.dialog({
+		   title : '来自石兴的消息',
+		   content : '输入的数2！',
+		   onyes:$.windowbox.message3,
+		   icon : "success.png",
+		}); 
+	},
+	message3: function(){ 
+		ds.dialog({
+		   title : '来自石兴的消息',
+		   content : '输入的数3！',
+		   onyes:$.windowbox.message4,
+		   icon : "success.png",
+		}); 
+	},
+	message4: function(){ 
+		ds.dialog({
+		   title : '来自石兴的消息',
+		   content : '输入的数4！',
+		   onyes:true,
+		   icon : "success.png",
+		}); 
+	}
+} 
+</script>
 </html>
