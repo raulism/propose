@@ -25,7 +25,7 @@
 </body>
 <script src="js/fire.js"></script>
 <script >
-	var audio = document.getElementsByTagName('audio')[0];
+	var music = document.getElementById('sound');
 	//audio.oncanplay = playmusic();
 	//var info = navigator.userAgent;
 	//console.log(info);
@@ -35,8 +35,8 @@
 	function playmusic (event){  
 		var event = event || window.event;  
 		if(firsttaped == 0){
-			console.log(audio);
-			audio.load();
+			alert(music);
+			music.play();
 			firsttaped = 1;
 		}
 	}
