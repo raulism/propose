@@ -54,9 +54,9 @@
 	document.addEventListener('touchstart',
 		function(){ 
 			var r=confirm("要听音乐吗，会要点流量哦");
-			if(r){soundHandle.play();};
-			if(soundHandle.played.length > 0){
-				func1();
+			if(r){
+				soundHandle.play();
+				setTimeout(fun1,5)
 			};
 		},
 		false
