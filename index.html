@@ -7,35 +7,63 @@
 <!--<script type="text/javascript" src="jquery-1.8.3.js"></script>-->
 <script type="text/javascript">
 	function func1(){
-	 	alert("你点击了一个按钮1");
+	 	alert("正如你听到的，难以忘记，初次见你");
 	 	func2();
 	}
  	function func2(){
- 		alert("你点击了一个按钮2");
+ 		alert("其实，我甚至还没有想好应该如何向你求婚。每当看到别人颇具创意的求婚视频发到网上被万人点击羡慕的时候");
  		func3();
 	}
  	function func3(){
- 		alert("你点击了一个按钮3");
+ 		alert("我都会心怀怨恨：路又窄了");
  		func4();
 	}
  	function func4(){
- 		alert("你点击了一个按钮4");
+ 		alert("一直以来以为最重要的是说这句话的时间和地点");
  		func5();
 	}
  	function func5(){
- 		alert("你点击了一个按钮5");
+ 		alert("可是，每当我想起我们第一次见面时你的样子");
+ 		func6();
+	}
+	function func6(){
+ 		alert("想起在南京火车站路边第一次牵起你的手");
+ 		func7();
+	}
+	function func7(){
+ 		alert("想起曾经晚上散步玄武湖一起的聊天");
+ 		func8();
+	}
+	function func8(){
+ 		alert("想起曾经晚上散步玄武湖一起的聊天");
+ 		func9();
+	}
+	function func9(){
+ 		alert("想起你那次生气流泪的表情");
+ 		func10();
+	}
+	function func10(){
+ 		alert("当然");
+ 		func11();
+	}
+	function func11(){
+ 		alert("想起以后我们一起生活，带上小孩。。");
+ 		func12();
+	}
+	function func12(){
+ 		alert("这才发现，最重要的，其实是你");
  		disp_confirm();
 	}
  	function disp_confirm()    {    
- 	     var r=confirm("答应吧")   
+ 	     var r=confirm("嫁给我吧")   
  	 	 if (r==true){    
  	 		window.location.href="demo.html"
  	    }else{    
-	 	     func6();  
+	 	     func13();  
  	     }    
  	}    
- 	function func6(){
- 		 var r=confirm("真的取消吗，会后悔的")   
+ 	function func13(){
+ 		 var r=confirm("真的不答应吗")   
  	 	 if (r==true){    
  	 		disp_confirm();
  	    }else{    
@@ -47,18 +75,18 @@
 
 <body style="margin:0;padding:0;line-height:1.5em;font-family:Verdana,Geneva,sans-serif;font-size:20px;color:#ffffff;background: #005b7f;">
 	<audio id="sound" style="display:none;" src = './music/qingfeideyi.m4a'></audio>
-	<br /><br /><br /><br /><br />
-	<div style="text-align:center;">想看看会有什么惊喜吗，点我吧^_^ </div>
+	<br /><br /><br /><br />
+	<div style="text-align:center;">my brain=(heart)?you:you</div>
+	<br />
+	<div style="text-align:center;">点我吧^_^ </div>
 </body>
 <script type="text/javascript">
 	var soundHandle = document.getElementById('sound');
 	document.addEventListener('touchstart',
 		function(){ 
-			var r=confirm("要听音乐吗，会要点流量哦");
-			if(r){
-				soundHandle.play();
-				setTimeout(func1,5000);
-			};
+			var r=confirm("要边听歌边看吗，会要点流量哦");
+			soundHandle.play();
+			setTimeout(func1,5000);
 		},
 		false
 	);  

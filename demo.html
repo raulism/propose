@@ -30,8 +30,8 @@
 	console.log(soundHandle.play());
 	document.addEventListener('touchstart',
 		function(){ 
-			var r=confirm("真的取消吗，会后悔的");
-			if(r){soundHandle.play();soundHandle.loop;}
+			soundHandle.play();
+			soundHandle.loop;
 		},
 		false
 	);  
