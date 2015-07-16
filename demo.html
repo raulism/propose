@@ -7,7 +7,7 @@
 	.city {width:100%;position:fixed;bottom:0px;z-index:100;}
 	.city img {width:100%;}
 </style>
-<title>HTML5夜空烟花绽放动画效果测试</title>
+<title>HTML5</title>
 </head>
 <body onselectstart="return false">
 	<canvas id='cas' style="background-color: rgba(0, 5, 24, 1)">浏览器不支持canvas</canvas>
@@ -16,12 +16,27 @@
 	</div>
 	<img src="./img/moon.png" alt="" id="moon" style="visibility: hidden;" />
 	<div style="display: none">
-		<div class="shape">刘敏</div>
-		<div class="shape">我爱你</div>
-		<div class="shape">I love U</div>
+		<div class="shape">某某</div>
+		<div class="shape">某某某</div>
+		<div class="shape">test test</div>
 	</div>
 	<!--<audio id="bgaudio" src="./music/1973.mp3"></audio>-->
 	<embed id="sound" src="./music/qingfeideyi.mp3" loop="-1" autostart="true" hidden="true"></embed>
 </body>
 <script src="js/fire.js"></script>
+<script >
+	var audio = document.getElementById('sound');
+	audio.oncanplay = playmusic();
+
+	var firsttaped = 0;
+	function playmusic(){
+		$('html').on('touchstart',function(){
+		if(firsttaped == 0){
+			audio.play();
+			firsttaped = 1;
+		}
+		});
+	};
+
+</script>
 </html>
