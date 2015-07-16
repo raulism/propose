@@ -6,14 +6,6 @@
 <title>测试页面</title>
 <!--<script type="text/javascript" src="jquery-1.8.3.js"></script>-->
 <script type="text/javascript">
-　 	function func0(){
-	 	var r=confirm("想边听歌边看下面这段话吗？^_^ ");
-		if(r){	
-			var soundHandle = document.getElementById('sound');
-			soundHandle.play();
-		}
-	 	func1();
-	}
 	function func1(){
 	 	alert("你点击了一个按钮1");
 	 	func2();
@@ -53,15 +45,17 @@
 </script>
 </head>
 
-<body onload="func0();">
-<audio id="sound" style="display:none;" src = './music/qingfeideyi.m4a'></audio>
+<body>
+	<audio id="sound" style="display:none;" src = './music/qingfeideyi.m4a'></audio>
+	<div>想看看会有什么惊喜吗，点我吧^_^ </div>
 </body>
 <script type="text/javascript">
 	var soundHandle = document.getElementById('sound');
 	document.addEventListener('touchstart',
 		function(){ 
-			var r=confirm("真的取消吗，会后悔的");
-			if(r){soundHandle.play();}
+			var r=confirm("要听音乐吗，会要点流量哦");
+			if(r){soundHandle.play();};
+			func1();
 		},
 		false
 	);  

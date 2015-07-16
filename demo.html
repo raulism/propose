@@ -20,7 +20,7 @@
 		<div class="shape">某某某</div>
 		<div class="shape">test test</div>
 	</div>
-	<audio id="sound" style="display:none;" src = './music/qingfeideyi.m4a'></audio>
+	<audio id="sound" style="display:none;" src = './music/qingfeideyi.m4a' loop="loop"></audio>
 	<!--<embed id="sound" src="./music/qingfeideyi.mp3" loop="-1" autostart="false" hidden="false"></embed>-->
 </body>
 <script src="js/fire.js"></script>
@@ -31,7 +31,7 @@
 	document.addEventListener('touchstart',
 		function(){ 
 			var r=confirm("真的取消吗，会后悔的");
-			if(r){soundHandle.play();}
+			if(r){soundHandle.play();soundHandle.loop;}
 		},
 		false
 	);  
