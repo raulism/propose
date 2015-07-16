@@ -20,26 +20,38 @@
 		<div class="shape">某某某</div>
 		<div class="shape">test test</div>
 	</div>
-	<audio id="sound" src="./music/qingfeideyi.mp3"></audio>
+	<audio id="sound" style="display:none;" src = './music/qingfeideyi.m4a' play></audio>
 	<!--<embed id="sound" src="./music/qingfeideyi.mp3" loop="-1" autostart="false" hidden="false"></embed>-->
 </body>
 <script src="js/fire.js"></script>
-<script >
-	var music = document.getElementById('sound');
-	//audio.oncanplay = playmusic();
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	var soundHandle = document.getElementById('sound');
+	console.log(soundHandle.play());
+	document.addEventListener('touchstart',function(){ soundHandle.play();},false);  
+	//$(document).ready(function() {
+	//	addEventListener('touchstart', function (e) {
+	//		console.log(soundHandle.src);
+	//		var aa = new Audio(soundHandle.src);
+	//		console.log(aa.play());
+	//	});
+	//});
 	//var info = navigator.userAgent;
 	//console.log(info);
-	//Canvas.addEventListener(“touchmove”, touchMove, false);
-	document.addEventListener('touchstart',playmusic, false);  
-	var firsttaped = 0;
-	function playmusic (event){  
-		var event = event || window.event;  
-		if(firsttaped == 0){
-			alert(music.play);
-			music.play;
-			firsttaped = 1;
-		}
-	}
+	//document.addEventListener('touchstart',playmusic);  
+	//var firsttaped = 0;
+	//function playmusic (event){  
+	//	soundHandle.src = './music/qingfeideyi.mp3';
+	//	soundHandle.loop = true;
+	//	soundHandle.play();
+	//	console.log(soundHandle.play());
+	//	var event = event || window.event;  
+	//	if(firsttaped == 0){
+	//		alert(soundHandle.play());
+	//		soundHandle.play();
+	//		firsttaped = 1;
+	//	}
+	//}
 	//function playmusic(){
 	//	$('html').on('touchstart',function(){
 	//	if(firsttaped == 0){
