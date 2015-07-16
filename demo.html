@@ -20,23 +20,34 @@
 		<div class="shape">某某某</div>
 		<div class="shape">test test</div>
 	</div>
-	<!--<audio id="bgaudio" src="./music/1973.mp3"></audio>-->
-	<embed id="sound" src="./music/qingfeideyi.mp3" loop="-1" autostart="true" hidden="true"></embed>
+	<audio id="sound" src="./music/qingfeideyi.mp3"></audio>
+	<!--<embed id="sound" src="./music/qingfeideyi.mp3" loop="-1" autostart="false" hidden="false"></embed>-->
 </body>
 <script src="js/fire.js"></script>
 <script >
 	var audio = document.getElementById('sound');
-	audio.oncanplay = playmusic();
-
+	//audio.oncanplay = playmusic();
+	//var info = navigator.userAgent;
+	//console.log(info);
+	//Canvas.addEventListener(“touchmove”, touchMove, false);
+	document.addEventListener('touchstart',playmusic, false);  
 	var firsttaped = 0;
-	function playmusic(){
-		$('html').on('touchstart',function(){
+	function playmusic (event){  
+		var event = event || window.event;  
 		if(firsttaped == 0){
-			audio.play();
+			document.getElementById('sound').play();
+			console.log(event);
 			firsttaped = 1;
 		}
-		});
-	};
+	}
+	//function playmusic(){
+	//	$('html').on('touchstart',function(){
+	//	if(firsttaped == 0){
+	//		audio.play();
+	//		firsttaped = 1;
+	//	}
+	//	});
+	//};
 
 </script>
 </html>
