@@ -55,7 +55,9 @@
 		function(){ 
 			var r=confirm("要听音乐吗，会要点流量哦");
 			if(r){soundHandle.play();};
-			//func1();
+			if(soundHandle.played.length > 0){
+				func1();
+			};
 		},
 		false
 	);  
