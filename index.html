@@ -7,52 +7,59 @@
 <!--<script type="text/javascript" src="jquery-1.8.3.js"></script>-->
 <script type="text/javascript">
 	function func1(){
-	 	alert("正如你听到的，难以忘记，初次见你");
-	 	func2();
+		var x=document.getElementById("demo");
+		x.innerHTML="正如你听到的，难以忘记，初次见你";
+		setTimeout("func2()",3000);
 	}
  	function func2(){
- 		alert("其实，我甚至还没有想好应该如何向你求婚。每当看到别人颇具创意的求婚视频发到网上被万人点击羡慕的时候");
- 		func3();
+		var x=document.getElementById("demo");
+		x.innerHTML="其实，我甚至还没有想好应该如何向你求婚。每当看到别人颇具创意的求婚视频发到网上被万人点击羡慕的时候";
+ 		setTimeout("func3()",6000);
 	}
  	function func3(){
- 		alert("我都会心怀怨恨：路又窄了");
- 		func4();
+		var x=document.getElementById("demo");
+		x.innerHTML="我都会心怀怨恨：路又窄了";
+ 		setTimeout("func4()",3000);
 	}
  	function func4(){
- 		alert("一直以来以为最重要的是说这句话的时间和地点");
- 		func5();
+		var x=document.getElementById("demo");
+		x.innerHTML="一直以来以为最重要的是说这句话的时间和地点";
+ 		setTimeout("func5()",4000);
 	}
  	function func5(){
- 		alert("可是，每当我想起我们第一次见面时你的样子");
- 		func6();
+		var x=document.getElementById("demo");
+		x.innerHTML="可是，每当我想起我们第一次见面时你的样子";
+ 		setTimeout("func6()",3000);
 	}
 	function func6(){
- 		alert("想起在南京火车站路边第一次牵起你的手");
- 		func7();
+		var x=document.getElementById("demo");
+		x.innerHTML="想起在南京火车站路边第一次牵起你的手";
+ 		setTimeout("func7()",3000);
 	}
 	function func7(){
- 		alert("想起曾经晚上散步玄武湖一起的聊天");
- 		func8();
+		var x=document.getElementById("demo");
+		x.innerHTML="想起曾经晚上散步玄武湖一起的聊天";
+ 		setTimeout("func8()",3000);
 	}
 	function func8(){
- 		alert("想起曾经晚上散步玄武湖一起的聊天");
- 		func9();
+ 		var x=document.getElementById("demo");
+		x.innerHTML="想起你那次生气流泪的表情";
+ 		setTimeout("func9()",3000);
 	}
 	function func9(){
- 		alert("想起你那次生气流泪的表情");
- 		func10();
+ 		var x=document.getElementById("demo");
+		x.innerHTML="当然";
+ 		setTimeout("func10()",2000);
 	}
 	function func10(){
- 		alert("当然");
- 		func11();
+ 		var x=document.getElementById("demo");
+		x.innerHTML="想起以后我们一起生活，带上小孩。。";
+ 		setTimeout("func11()",4000);
 	}
 	function func11(){
- 		alert("想起以后我们一起生活，带上小孩。。");
- 		func12();
-	}
-	function func12(){
- 		alert("这才发现，最重要的，其实是你");
- 		disp_confirm();
+ 		var x=document.getElementById("demo");
+		x.innerHTML="这才发现，最重要的，其实是你";
+ 		//setTimeout("disp_confirm()",3000);
 	}
  	function disp_confirm()    {    
  	     var r=confirm("嫁给我吧")   
@@ -76,19 +83,21 @@
 <body style="margin:0;padding:0;line-height:1.5em;font-family:Verdana,Geneva,sans-serif;font-size:20px;color:#ffffff;background: #005b7f;">
 	<audio id="sound" style="display:none;" src = './music/qingfeideyi.m4a'></audio>
 	<br /><br /><br /><br />
-	<div style="text-align:center;">my brain=(heart)?you:you</div>
+	<div style="text-align:center;" id="brain">my brain=(heart)?you:you</div>
 	<br />
-	<div style="text-align:center;">点我吧^_^ </div>
+	<p style="text-align:center;font-size:10px" id="demo">点我吧^_^ </p>
 </body>
 <script type="text/javascript">
 	var soundHandle = document.getElementById('sound');
 	document.addEventListener('touchstart',
 		function(){ 
-			var r=confirm("要边听歌边看吗，会要点流量哦");
-			soundHandle.play();
-			setTimeout(func1,5000);
+			//var r=confirm("要边听歌边看吗，会要点流量哦");
+			//soundHandle.play();
+			document.body.removeChild(document.getElementById("brain"));  
+			setTimeout(func1,1000);
 		},
 		false
 	);  
 </script>
+<script type="text/javascript" src="./js/popup.js"></script>
 </html>
